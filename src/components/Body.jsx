@@ -11,13 +11,13 @@ function Body() {
     {/* About-me Section */}
         <div className='container about-me' id='about'>
             <div className='row'>
-                <div className='profile-pic'>
+                <div className='about-me-pic'>
                     <img src={aboutMePic} alt='about-me-pic'></img>
                 </div>
                 <div className='about-text'>
                     <div>
                         <h1 className='header-text'>About Me</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, dignissimos iste sunt soluta placeat doloribus non, consequuntur saepe natus nisi minima voluptate neque in culpa quis illo exercitationem porro delectus!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, dignissimos iste sunt soluta placeat doloribus non, consequuntur saepe natus nisi minima voluptate neque in culpa quis illo exercitationem porro delectus! Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae amet fugiat omnis quaerat? Repellat porro asperiores magni officiis quaerat! Consectetur deserunt corporis magni totam ducimus inventore amet provident quae. Voluptatibus.</p>
                     </div>
                      <div className={`socials-row`}>
                         <a href='https://github.com/Leovihildo'><img src={github} alt='github-profile' /></a>
@@ -26,6 +26,14 @@ function Body() {
                         <img src={tiktok} alt='Tiktok-profile'/>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        {/* Experience Section */}
+        <div className='container experience' id='experience'>
+            <div className='row'>
+                <h1 className='header-text'>Experience</h1>
+
             </div>
         </div>
     </>
