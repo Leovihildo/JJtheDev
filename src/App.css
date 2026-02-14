@@ -40,7 +40,8 @@ p{
   padding: 7px 0;
 }
 .container{
-  height: 100vh;
+  min-height: 100vh;
+  /* min-height: 840px; */
   width: 100vw;
   margin: 30px 5px;
 }
@@ -58,10 +59,11 @@ p{
   border: 2px solid var(--font-mainColour);
   border-radius: 10px;
   margin: 28px 0 0 0;
-  padding: 5px;
+  padding: 10px 25px;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 a{
   text-decoration: none;
@@ -103,7 +105,7 @@ nav{
   display: flex;
   padding: .7rem;
   padding: 20px;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 .hamburger-menu{
   position: relative;
@@ -157,7 +159,7 @@ nav{
   align-items: start;
 }
 .profile-pic, .about-me-pic{
-  width: 320px;
+  width: 380px;
   height: auto;
   margin: 0 auto;
 }
@@ -171,7 +173,7 @@ nav{
 
 /* ABOUT ME SECTION */
 .about-text{
-  margin-top: -35px;
+  margin-top: -55px;
 }
 .socials-row{
   margin-top: 15px;
@@ -181,6 +183,75 @@ nav{
 .socials-row img{
   width: 50px;
   height: 50px;
+}
+
+/* PROJECTS SECTION */
+.projects-stack {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.project-card {
+  width: 100%;
+  height: 80vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  padding: 60px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card:nth-child(2) {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.project-card:nth-child(3) {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+.project-card div.project-img{
+  width: 100%;
+  height: 480px;
+  border: 1px solid #fff;
+  margin-bottom: 25px;
+}
+.project-card div.project-img>img{
+  width: 100%;
+  height: 100%;
+}
+
+.project-content {
+  color: var(--font-mainColour);
+  max-width: 800px;
+}
+
+.project-content h2 {
+  font-family: var(--paragraph-fontType);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.project-content p {
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.tech-stack {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.tech-tag {
+  background: rgba(255,255,255,0.2);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  backdrop-filter: blur(10px);
 }
 
 
@@ -196,37 +267,106 @@ nav{
   }
   .container{
     width: 90%;
-    margin: auto auto;
+    margin: 0 auto;
   }
     .row{
     flex-direction: row;
     padding: 5px;
     gap: 5rem;
   }
-  .intro-text, .about-text{
+  .row>div:nth-child(1){
     width: 50%;
     margin-right: 30px;
+  }
+   .row>div:nth-child(2){
+    width: 50%;
+  }
+  .intro-text p{
+    width: 90%;
+  }
+  .about-me{
+    margin-bottom: 60px;
   }
   .about-text{
     margin-top: 50px;
   }
-  .profile-pic{
-    width: 45%;
-  }
-  .profile-pic>img{
-    height: 95%;
+  .profile-pic>img, .about-me-pic>img{
+    width: 420px;
+    height: auto;
   }
   .home .profile-pic{
-    margin-top: -110px;
+    margin-top: -130px;
   }
-  .about-me-pic{
-    width: 40%;
+  .socials-row img{
+    width: 60px;
+    height: 60px;
+  }
+  .projects .row{
+    flex-direction: column;
+  }
+  .projects .row>div{
+    width: 100%;
+  }
+  .project-card{
+    flex-direction: row;
+    gap: 3rem;
+  }
+  .project-card>a>div.project-img{
+    width: 60%;
+    height: 90%;
+    border: 1px solid #fff;
+  }
+  .project-card div.project-img>img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* For Really Really Big screens */
+@media (width>1200px) {
+  :root{
+    /* FONT */
+    --header-font: 7.7rem;
+    --paragraph-font: 1.5rem;
+  }
+  .btn{
+    width: 190px;
+    height: 70px;
+  }
+  .profile-pic>img, .about-me-pic>img{
+    width: 570px;
+    height: auto;
+  }
+  .home .profile-pic{
+    margin-top: -150px;
+  }
+}
+
+/* For very small devices */
+@media (width>375px) and (width<412px) {
+    :root{
+    /* FONT */
+    --header-font: 3.8rem;
+    --paragraph-font: .9rem;
+  }
+  .container{
+    margin-bottom: 80px;
+  }
+  nav{
+    margin-bottom: 10px;
+  }
+  .home .profile-pic{
+    margin-top: -80px;
+  }
+  .profile-pic, .about-me-pic{
+    width: 330px;
   }
   .socials-row img{
     width: 60px;
     height: 60px;
   }
 }
+
 
 
 

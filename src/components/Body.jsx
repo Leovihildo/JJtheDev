@@ -6,6 +6,32 @@ import linkdin from './images/Linkedin.png'
 import tiktok from './images/Tiktok.png'
 
 function Body() {
+        const projects = [
+        {
+            id: 1,
+            title: "E-Commerce Platform",
+            description: "A full-stack e-commerce solution with React and Node.js",
+            link: "",
+            tech: ["React", "Node.js", "MongoDB"],
+            image: "/images/project1.jpg"
+        },
+        {
+            id: 2,
+            title: "Task Management App",
+            description: "Collaborative task management with real-time updates",
+            link: "",
+            tech: ["React", "Firebase", "Tailwind"],
+            image: "/images/project2.jpg"
+        },
+        {
+            id: 3,
+            title: "Weather Dashboard",
+            description: "Real-time weather data with interactive maps",
+            link: "",
+            tech: ["React", "API Integration", "Charts"],
+            image: "/images/project3.jpg"
+        }
+    ];
   return (
     <>
     {/* About-me Section */}
@@ -30,12 +56,28 @@ function Body() {
         </div>
 
         {/* Experience Section */}
-        <div className='container experience' id='experience'>
+        <div className='container projects' id='projects'>
             <div className='row'>
-                <h1 className='header-text'>Experience</h1>
-
+                <h1 className='header-text'>Projects</h1>
+                {/* Project Cards */}
+                 <div className='projects-stack'>
+                    {projects.map((project) => (
+                        <div key={project.id} className='project-card'>
+                            <a href={project.link}><div className='project-img'><img src={project.image} /></div></a>
+                            <div className='project-content'>
+                                <h2>{project.title}</h2>
+                                <p>{project.description}</p>
+                                <div className='tech-stack'>
+                                    {project.tech.map((tech, i) => (
+                                        <span key={i} className='tech-tag'>{tech}</span>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                </div>
             </div>
-        </div>
     </>
   )
 }
