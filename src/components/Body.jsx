@@ -5,6 +5,8 @@ import xSocial from './images/X.png'
 import linkdin from './images/Linkedin.png'
 import tiktok from './images/Tiktok.png'
 import pixonomi from './images/PixonomiBigScreen.jpg'
+import jam from './images/JAMBigScreen.jpg'
+import quizly from './images/QuizlyBigScreen.jpg'
 
 function Body() {
         const projects = [
@@ -12,25 +14,25 @@ function Body() {
             id: 1,
             title: "Pixonomi LLC",
             description: "A B2B company specializing in lead conversion solutions",
-            link: "",
+            link: "https://www.pixonomi.com/",
             tech: ["Ruby on Rails", "HTML/CSS"],
             image: pixonomi
         },
         {
             id: 2,
-            title: "Task Management App",
-            description: "Collaborative task management with real-time updates",
-            link: "",
-            tech: ["React", "Firebase", "Tailwind"],
-            image: "/images/project2.jpg"
+            title: "JAM",
+            description: "An online marketplace to get the most trustworthy and skillfull artisans",
+            link: "https://leovihildo.github.io/justanothermarketplace/",
+            tech: ["React", "Github", "Tailwind"],
+            image: jam
         },
         {
             id: 3,
-            title: "Weather Dashboard",
-            description: "Real-time weather data with interactive maps",
-            link: "",
-            tech: ["React", "API Integration", "Charts"],
-            image: "/images/project3.jpg"
+            title: "Quizly",
+            description: "Fun and interactive quiz app to test your general knowledge",
+            link: "https://leovihildo.github.io/Quizly/",
+            tech: ["React", "API Integration"],
+            image: quizly
         }
     ];
   return (
