@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/JJtheDev/static/css/main.1a3c6a76.css",
-    "main.js": "/JJtheDev/static/js/main.de66a213.js",
+    "main.css": "/JJtheDev/static/css/main.156fae59.css",
+    "main.js": "/JJtheDev/static/js/main.42ccb183.js",
     "static/js/453.d1451eca.chunk.js": "/JJtheDev/static/js/453.d1451eca.chunk.js",
     "static/media/1.png": "/JJtheDev/static/media/1.31c0bd761153ae2611ff.png",
     "static/media/3.png": "/JJtheDev/static/media/3.ed2051d97e1ed95fe6d4.png",
@@ -9,14 +9,15 @@
     "static/media/X.png": "/JJtheDev/static/media/X.5f3b4591ec4b9ddcd96c.png",
     "static/media/Tiktok.png": "/JJtheDev/static/media/Tiktok.c53820f383dcbc5b9420.png",
     "static/media/Linkedin.png": "/JJtheDev/static/media/Linkedin.dc9ce6409df53091ced0.png",
+    "static/media/PixonomiBigScreen.jpg": "/JJtheDev/static/media/PixonomiBigScreen.b55464ade6d9b3939b84.jpg",
     "static/media/homeBackground.jpeg": "/JJtheDev/static/media/homeBackground.9b8d65e8b5e91c9da420.jpeg",
     "index.html": "/JJtheDev/index.html",
-    "main.1a3c6a76.css.map": "/JJtheDev/static/css/main.1a3c6a76.css.map",
-    "main.de66a213.js.map": "/JJtheDev/static/js/main.de66a213.js.map",
+    "main.156fae59.css.map": "/JJtheDev/static/css/main.156fae59.css.map",
+    "main.42ccb183.js.map": "/JJtheDev/static/js/main.42ccb183.js.map",
     "453.d1451eca.chunk.js.map": "/JJtheDev/static/js/453.d1451eca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a3c6a76.css",
-    "static/js/main.de66a213.js"
+    "static/css/main.156fae59.css",
+    "static/js/main.42ccb183.js"
   ]
 }
