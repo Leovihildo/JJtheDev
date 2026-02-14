@@ -4,16 +4,17 @@ import github from './images/Github.png'
 import xSocial from './images/X.png'
 import linkdin from './images/Linkedin.png'
 import tiktok from './images/Tiktok.png'
+import pixonomi from './images/PixonomiBigScreen.jpg'
 
 function Body() {
         const projects = [
         {
             id: 1,
-            title: "E-Commerce Platform",
-            description: "A full-stack e-commerce solution with React and Node.js",
+            title: "Pixonomi LLC",
+            description: "A B2B company specializing in lead conversion solutions",
             link: "",
-            tech: ["React", "Node.js", "MongoDB"],
-            image: "/images/project1.jpg"
+            tech: ["Ruby on Rails", "HTML/CSS"],
+            image: pixonomi
         },
         {
             id: 2,
@@ -62,8 +63,8 @@ function Body() {
                 {/* Project Cards */}
                  <div className='projects-stack'>
                     {projects.map((project) => (
-                        <div key={project.id} className='project-card'>
-                            <a href={project.link}><div className='project-img'><img src={project.image} /></div></a>
+                        <div key={project.id} className='project-card' style={{'background-image': {pixonomi}}}>
+                            <div className='project-img'><a href={project.link}><img src={project.image} /></a></div>
                             <div className='project-content'>
                                 <h2>{project.title}</h2>
                                 <p>{project.description}</p>

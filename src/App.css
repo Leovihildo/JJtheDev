@@ -213,15 +213,14 @@ nav{
 .project-card:nth-child(3) {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
 }
-.project-card div.project-img{
-  width: 100%;
-  height: 480px;
-  border: 1px solid #fff;
+.project-card>div.project-img{
+  width: 350px;
+  height: auto;
   margin-bottom: 25px;
 }
-.project-card div.project-img>img{
+.project-card>div.project-img img{
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .project-content {
@@ -311,15 +310,14 @@ nav{
     flex-direction: row;
     gap: 3rem;
   }
-  .project-card>a>div.project-img{
-    width: 60%;
-    height: 90%;
-    border: 1px solid #fff;
+  .project-card>div.project-img{
+    width: 80%px;
+    height: auto;
   }
-  .project-card div.project-img>img{
-    width: 100%;
-    height: 100%;
-  }
+  .project-card>div.project-img img{
+  width: 100%;
+  height: 100%;
+}
 }
 
 /* For Really Really Big screens */
@@ -339,6 +337,10 @@ nav{
   }
   .home .profile-pic{
     margin-top: -150px;
+  }
+   .project-card>a{
+    width: 90%;
+    height: auto;
   }
 }
 
