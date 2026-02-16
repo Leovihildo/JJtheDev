@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import aboutMePic from './images/3.png'
 import github from './images/Github.png'
 import xSocial from './images/X.png'
@@ -50,11 +50,30 @@ function Body() {
         }
     ];
 
+    useEffect(() => {
+         const handleScroll = () => {
+            const sections = document.querySelectorAll('.container');
+            
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight * 0.8;
+                
+                if (isVisible) {
+                    section.classList.add('animate__fadeInUp');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Check on mount
+        
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
   return (
     <>
     {/* About-me Section */}
-        <div className='container about-me animate__animated animate__fadeInUp' id='about'>
+        <div  className={`container about-me animate__animated`} id='about'>
             <div className='row'>
                 <div className='about-me-pic'>
                     <img src={aboutMePic} alt='about-me-pic' loading='lazy' decoding='async'></img>
@@ -63,8 +82,8 @@ function Body() {
                     <div>
                         <h1 className='header-text'>About Me</h1>
                         <p>
-                            I'm Joshua Johnson, a Frontend Developer who believes great code should be invisible — users should just experience something that works. For the past 4+ years, I've been building web applications that balance technical excellence with real-world usability. I focus on creating solutions that deliver measurable results.
-                            My toolkit includes React, TypeScript, JavaScript, HTML5, CSS3, and modern frameworks that help me build fast, accessible, and responsive web experiences. But beyond the tech stack, what drives me is solving problems — turning complex requirements into intuitive interfaces that people actually enjoy using.
+                            I'm Joshua Johnson, a Frontend Developer who believes great code should be invisible — users should just experience something that works. For the past 5+ years, I've been building web applications that balance technical excellence with real-world usability. I focus on creating solutions that deliver measurable results.
+                            My toolkit includes React, TypeScript, JavaScript, HTML5, CSS3, and modern frameworks that help me build fast, accessible, and responsive web experiences. But beyond the tech stack, what drives me is solving problems, turning complex requirements into intuitive interfaces that people actually enjoy using.
                             I'm a Computer Science graduate from the University of Ibadan, always learning, always improving, and always looking for the next challenge that pushes my skills forward.
                         </p>
                     </div>
@@ -79,7 +98,7 @@ function Body() {
         </div>
 
         {/* Experience Section */}
-        <div className='container projects animate__animated animate__fadeInUp' id='projects'>
+        <div  className={`container projects animate__animated`} id='projects'>
             <div className='row'>
                 <h1 className='header-text'>Projects</h1>
                 {/* Project Cards */}
@@ -103,7 +122,7 @@ function Body() {
             </div>
         
         {/* Stack Section */}
-        <div className='container stack animate__animated animate__fadeInUp' id='stack'>
+        <div className={`container stack animate__animated`} id='stack'>
             <div className='row'>
                     <h1 className='header-text'>Stack</h1>
                     <div className='logos'>
@@ -114,7 +133,7 @@ function Body() {
         </div>
 
         {/* Call to Action */}
-        <div className='container cta animate__animated animate__fadeInUp' id='cta'>
+        <div className={`container cta animate__animated`} id='cta'>
             <div className='row'>
                 <h1 className='header-text'>Contact me</h1>
                 <textarea placeholder='Type your message' onInput={e=> setInputVal(e.target.value)}/>

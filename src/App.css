@@ -45,6 +45,10 @@ p{
   /* min-height: 840px; */
   width: 100vw;
   margin: 30px 5px 65px 5px;
+  /* padding-top: 7.5rem; */
+}
+.about-me, .projects, .stack, .cta{
+  opacity: 0;
 }
 .about-me{
   margin-bottom: 90px;
@@ -69,12 +73,39 @@ p{
   justify-content: center;
   text-align: center;
   cursor: pointer;
+  z-index: 8;
 }
 a{
   text-decoration: none;
   color: var(--font-mainColour);
   font-family: var(--paragraph-fontType);
   font-size: var(--paragraph-font);
+}
+.arrow-up{
+  width: 50px;
+  min-height: 50px;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+  z-index: 7;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+.arrow-up.visible{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.arrow-up>a>img{
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-subColour);
+  border-radius: 50%;
+  padding: .2rem .3rem;
+  box-shadow: 0 0 8px var(--bg-subColour),
+                0 0 20px var(--bg-subColour),
+                0 0 30px var(--bg-subColour);
 }
 
 /* HEADER MENU */
@@ -90,7 +121,7 @@ a{
   justify-content: center;
   align-items: center;
   transition: .3s ease;
-  z-index: 999999;
+  z-index: 9;
 }
 .menu-screen.active{
   left: 0;
@@ -111,15 +142,20 @@ nav{
   width: 100%;
   background-color: transparent;
   display: flex;
-  padding: .7rem;
-  margin-bottom: 60px;
-  z-index: 999999999999;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+nav.active{
+  position: fixed;
 }
 .hamburger-menu{
   position: relative;
   width: 30px;
   height: 30px;
   margin-left: auto;
+  z-index: 99;
 }
 .hamburger-menu>span{
   position: absolute;
@@ -207,7 +243,7 @@ nav{
 .project-card {
   overflow: hidden;
   width: 100%;
-  min-height: 80vh;
+  max-height: 80vh;
   background: linear-gradient(135deg, #181818 0%, #000000 100%);
   border-radius: 20px;
   padding: 20px;
@@ -313,7 +349,7 @@ nav{
 
 /* STACK SECTION */
 .stack{
-  min-height: 55vh;
+  min-height: 50vh;
 }
 .logos{
   width: 100%;
@@ -326,11 +362,14 @@ nav{
 }
 
 /* CTA SECTION */
+#cta{
+  min-height: 50vh;
+}
 .cta textarea{
     max-width: 100%;
-    max-height: 220px;
+    max-height: 480px;
     margin: 30px 0;
-    padding: 20px 10px;
+    padding: 10px;
     resize: none;
     background-color: #303030;
     border: none;
@@ -339,8 +378,8 @@ nav{
     font-size: var(--paragraph-font);
   }
   .cta button{
-    width: 180px;
-    height: 60px;
+    width: 260px;
+    height: 70px;
     margin: 0 auto;
     color: var(--font-mainColour);
     font-family: var(--header-fontType);
@@ -363,10 +402,12 @@ nav{
    :root{
     /* FONT */
     --header-font: 3rem;
-    --paragraph-font: .8rem;
   }
   .profile-pic, .about-me-pic{
     width: 290px;
+  }
+  .stack{
+    min-height: 60vh;
   }
 }
 
@@ -384,6 +425,11 @@ nav{
 
 /* For Tabs and Wider Screens */
 @media (width>767px){
+   :root{
+    /* FONT */
+    --header-font: 4.8rem;
+    --paragraph-font: 1.2rem;
+  }
    .container{
     min-height: 50vh;
     width: 90%;
@@ -460,6 +506,9 @@ nav{
   .home .profile-pic{
     margin-top: -130px;
   }
+  .arrow-up{
+    display: none;
+  }
    .about-me, .projects, .stack{
     margin-bottom: 85px;
   }
@@ -494,6 +543,12 @@ nav{
   .logos>img{
     width: 140px;
     height: 140px;
+  }
+  .stack{
+    margin-top: 180px;
+  }
+  .stack, .cta{
+    min-height: 90vh !important;
   }
 }
 
