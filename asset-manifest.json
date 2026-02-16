@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/JJtheDev/static/css/main.f6acdb00.css",
-    "main.js": "/JJtheDev/static/js/main.322a26a1.js",
+    "main.css": "/JJtheDev/static/css/main.d737be9a.css",
+    "main.js": "/JJtheDev/static/js/main.e6924459.js",
     "static/js/453.d1451eca.chunk.js": "/JJtheDev/static/js/453.d1451eca.chunk.js",
     "static/media/HtmlCsslogo.png": "/JJtheDev/static/media/HtmlCsslogo.184c3c36d388e2d52aea.png",
     "static/media/1.png": "/JJtheDev/static/media/1.31c0bd761153ae2611ff.png",
@@ -22,12 +22,12 @@
     "static/media/QuizlyBigScreen.jpg": "/JJtheDev/static/media/QuizlyBigScreen.b6c91d108203bea23ed7.jpg",
     "static/media/homeBackground.jpeg": "/JJtheDev/static/media/homeBackground.9b8d65e8b5e91c9da420.jpeg",
     "index.html": "/JJtheDev/index.html",
-    "main.f6acdb00.css.map": "/JJtheDev/static/css/main.f6acdb00.css.map",
-    "main.322a26a1.js.map": "/JJtheDev/static/js/main.322a26a1.js.map",
+    "main.d737be9a.css.map": "/JJtheDev/static/css/main.d737be9a.css.map",
+    "main.e6924459.js.map": "/JJtheDev/static/js/main.e6924459.js.map",
     "453.d1451eca.chunk.js.map": "/JJtheDev/static/js/453.d1451eca.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f6acdb00.css",
-    "static/js/main.322a26a1.js"
+    "static/css/main.d737be9a.css",
+    "static/js/main.e6924459.js"
   ]
 }
