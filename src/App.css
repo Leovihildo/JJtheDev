@@ -33,6 +33,8 @@ p{
   font-size: var(--paragraph-font);
   line-height: 1.4;
   text-align: justify;
+  word-spacing: 2px;
+  letter-spacing: -1.2px;
 }
 .header-text{
   font-family: var(--header-fontType);
@@ -80,6 +82,9 @@ a{
   color: var(--font-mainColour);
   font-family: var(--paragraph-fontType);
   font-size: var(--paragraph-font);
+}
+a:focus{
+  outline: none;
 }
 .arrow-up{
   width: 50px;
@@ -378,12 +383,17 @@ nav.active{
     font-size: var(--paragraph-font);
   }
   .cta button{
-    width: 260px;
-    height: 70px;
     margin: 0 auto;
+    width: 240px;
+    height: 70px;
     color: var(--font-mainColour);
     font-family: var(--header-fontType);
     font-size: var(--paragraph-font);
+  }
+  .cta>.row a{
+    width: 260px;
+    height: 70px;
+    margin: auto auto;
   }
 /* FOOTER SECTION */
 .footer{

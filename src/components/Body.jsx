@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import aboutMePic from './images/3.png'
 import github from './images/Github.png'
 import xSocial from './images/X.png'
@@ -62,6 +62,25 @@ function Body() {
                     section.classList.add('animate__fadeInUp');
                 }
             });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        handleScroll(); // Check on mount
+        
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
+    const textareaRef = useRef(null);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (textareaRef.current) {
+                const rect = textareaRef.current.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+                
+                if (isVisible && document.activeElement !== textareaRef.current) {
+                    textareaRef.current.focus();
+                }
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -136,8 +155,8 @@ function Body() {
         <div className={`container cta animate__animated`} id='cta'>
             <div className='row'>
                 <h1 className='header-text'>Contact me</h1>
-                <textarea placeholder='Type your message' onInput={e=> setInputVal(e.target.value)}/>
-                <a href={`https://wa.me/2348096169948?text=${inputVal}`} target='_blank' rel='noreferrer'><button className='btn  hire-btn'>Send</button></a>
+                <textarea ref={textareaRef} placeholder='Type your message' onInput={e=> setInputVal(e.target.value)}/>
+                <a href={`https://wa.me/2348096169948?text=${inputVal}`} target='_blank' rel='noreferrer'><button className='btn  hire-btn'>Send message</button></a>
             </div>
         </div>
 
