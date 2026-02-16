@@ -1,6 +1,7 @@
 import './App.css';
 import Body from './components/Body';
 import Homepage from './components/Homepage';
+import 'animate.css';
 
 
 function App() {
